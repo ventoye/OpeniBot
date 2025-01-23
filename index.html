@@ -3,53 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceX Style Webpage</title>
+    <title>SpaceX Style Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>SpaceX</h1>
-        </div>
         <nav>
-            <ul>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#launches">Launches</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="logo">SpaceX</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Missions</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="hero">
+            <h1>Explore the Universe</h1>
+            <p>Join us on our mission to explore the stars</p>
+        </div>
     </header>
-
-    <section id="hero">
-        <h2>Explore the Universe</h2>
-        <p>Join us on our mission to make space travel accessible for everyone.</p>
-    </section>
-
-    <section id="mission">
-        <h2>Our Mission</h2>
-        <p>SpaceX designs, manufactures and launches advanced rockets and spacecraft.</p>
-    </section>
-
-    <section id="launches">
-        <h2>Recent Launches</h2>
-        <p>Check out our latest launches and missions.</p>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Learn more about SpaceX and our journey.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us for more information.</p>
-    </section>
-
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>We are a private aerospace company dedicated to making space travel accessible to everyone.</p>
+        </section>
+        <section class="missions">
+            <h2>Our Missions</h2>
+            <div class="mission">
+                <h3>Mission 1</h3>
+                <p>Description of Mission 1</p>
+            </div>
+            <div class="mission">
+                <h3>Mission 2</h3>
+                <p>Description of Mission 2</p>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="images">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 SpaceX. All rights reserved.</p>
+        <p>&copy; 2025 SpaceX Style Website. All rights reserved.</p>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
