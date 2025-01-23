@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+header {
+    height: 100vh;
+    background: url('hero.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.about, .missions, .gallery {
+    text-align: center;
+}
+
+.mission {
+    margin-top: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.images img {
+    margin: 10px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
