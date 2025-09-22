@@ -1,0 +1,493 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+  li,a {
+    font-family: "poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  a:hover {
+    color: #888;
+  }
+  nav {
+    position: fixed;
+    z-index: 1000;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    display: flex;
+    top: 0;
+    height: 48px;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+  }
+  /* 隐藏状态 */
+  .nav-all.hidden {
+      transform: translateY(-100%);
+  }
+  .nav-tab {
+    display: flex;
+    align-items: center;
+  }
+  .nav-tab-item {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 2vw;
+    gap: 2vw;
+    List-style-type: none
+  }
+  .hover-effect {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  .hover-effect::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -13px; /* 距离文字8px */
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      transition: width 0.2s ease-in; /* 默认离开时的缓动效果 */
+  }
+  .hover-effect:hover::after {
+      width: 100%;
+      transition-timing-function: ease-out; /* 悬停时的缓动效果 */
+  }
+  .nav-logo {
+    padding: 0.15vw 0 0 6vw;
+  }
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 0 6vw 0 0;
+    gap: 1.4vw;
+    List-style-type: none
+  }
+  .navbar-search {
+    margin: 4px 0 0 0;
+  }
+  .navbar-login {
+    margin: 4px 0 0 0;
+  }
+  .navbar-shoping a {
+    font-family: "poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px 8px 12px;
+    border-radius: 24px 24px 24px 24px;
+    background-color: rgb(30, 144, 255, 1);
+    white-space: nowrap;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    transition: 0.4s;
+  }
+  .navbar-shoping a:hover {
+    background-color: rgb(30, 144, 255, 0.7);
+    color: #fff;
+  }
+  main {
+    width: 100%;
+  }
+  .all {
+    margin-top: 48px;
+  }
+  .full-width-image {
+    position: relative;
+    margin-bottom: 0.7vw;
+    width: 100%;
+    overflow: hidden; /* 防止图片溢出 */
+  }
+  .full-width-image img {
+    width: 100%; /* 图片宽度铺满屏幕 */
+    height: auto; /* 高度自适应，保持图片比例 */
+    display: block; /* 去除图片下方的空白间隙 */
+  }
+  .banner-text {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 20%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .banner1-text1 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 2.8vw;
+    color: #fff;
+  }
+  .banner-text2 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 30%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .banner1-text2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size:1.6vw;
+    color: #fff;
+  }
+  .banner-text0 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 10%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .banner1-text0 {
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.6vw;
+    color: #fff;
+  }
+  .banner-text3 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 40%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .banner1-text3 {
+    font-family: "poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 0.7vw;
+    color: #fff;
+    background-color: rgb(255, 255, 255, 0.04);
+    padding: 0.24vw 0.8vw 0.2vw 1vw;
+    border-radius: 1vw 1vw 1vw 1vw;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    transition: 0.2s;
+  }
+  .banner1-text3:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+  }
+  .container {
+    max-width: 100vw;
+    margin-bottom: 0.7vw;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 固定两列 */
+    gap: 0.7vw;
+    margin-left: 0.7vw;
+    margin-right: 0.7vw;
+  }
+  .gallery-item {
+    position: relative;
+    width: 100%;
+    padding-top: 66%; /* 控制图片高度比例 */
+    border-radius: 0;
+    overflow: hidden;
+    background: #f0f0f0; /* 加载时的背景色 */
+  }
+  .gallery-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.1s ease;
+  }
+  /* 悬停效果 */
+  .gallery-item:hover .gallery-image {
+    transform: scale(1.01);
+  }
+  
+  .threelian-0 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 13%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .threelian-text0 {
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.6vw;
+    color: #000;
+  }
+  .threelian-1 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 22%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .threelian-text1 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 2vw;
+    color: #000;
+  }
+  .threelian-2 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 33%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .threelian-text2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 1.2vw;
+    color: #000;
+  }
+  .threelian-3 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 92%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .threelian-text3 {
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 0.8vw;
+    color: #000;
+    transition: 0.2s;
+  }
+  .threelian-text3:hover {
+    color: rgb(0, 0, 0, 0.6);
+  }
+  .dahengfu-0 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 15%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .dahengfu-text0 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 2.6vw;
+    color: #fff;
+    white-space: nowrap;/* 阻止文本换行 */
+  }
+  .dahengfu-2 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 24%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .dahengfu-text2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 1vw;
+    color: #fff;
+  }
+  .dahengfu-3 {
+    position: absolute;
+    left: 50%;          /* 水平定位起点 */
+    top: 31%;           /* 垂直定位起点 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    text-align: center; /* 文字内容居中 */
+  }
+  .dahengfu-text3 {
+    font-family: "poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1vw;
+    color: #fff;
+  }
+  .dahengfu-text3:hover {
+    color: rgb(255, 255, 255, 0.6);
+  }
+  .baliantu {
+    max-width: 100vw;
+    margin-bottom: 12vw;
+  }
+  .baliantu-all {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr); /* 固定两列 */
+    gap: 0.7vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  .baliantu-all-item {
+    position: relative;
+    width: 100%;
+    padding-top: 88%; /* 控制图片高度比例 */
+    border-radius: 0;
+    overflow: hidden;
+    background: #f0f0f0; /* 加载时的背景色 */
+  }
+  .baliantu-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .baliantu-0 {
+    position: absolute;
+    left: 8%;          /* 水平定位起点 */
+    top: 60%;           /* 垂直定位起点 */
+  }
+  .baliantu-text0 {
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.06vw;
+    font-size: 0.6vw;
+    color: #000;
+  }
+  .baliantu-1 {
+    position: absolute;
+    left: 8%;          /* 水平定位起点 */
+    top: 10%;           /* 垂直定位起点 */
+  }
+  .baliantu-text1 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.06vw;
+    font-size: 1.4vw;
+    color: #000;
+  }
+  .baliantu-2 {
+    position: absolute;
+    left: 8%;          /* 水平定位起点 */
+    top: 82%;           /* 垂直定位起点 */
+  }
+  .baliantu-text2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.06vw;
+    font-size: 0.8vw;
+    color: #000;
+    text-decoration: underline;
+  }
+  .baliantu-main {
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    text-align: center; /* 文字内容居中 */
+  }
+  .baliantu-main-text {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.06vw;
+    font-size: 3vw;
+    color: #000;
+    white-space: nowrap;/* 阻止文本换行 */
+  }
+  .baliantu-main-text2 {
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.06vw;
+    font-size: 0.8vw;
+    color: #000;
+    white-space: nowrap;/* 阻止文本换行 */
+  }
+  /* 页面底部基础样式 */
+  .site-footer {
+    font-family: "poppins", sans-serif;
+    background: #fff;
+  }
+  
+  .footer-container {
+    margin-left: 20vw;
+    margin-right: 10vw;
+  }
+  
+  /* 主要内容区块 */
+  .footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2vw;
+  
+  }
+  
+  .footer-group {
+    flex: 1;
+  }
+  
+  .footer-title {
+    font-family: "poppins", sans-serif;
+    letter-spacing: 0.06vw;
+    color: #888;
+    font-weight: 400;
+    margin-bottom: 1vw;
+    font-size: 0.7vw;
+  }
+  
+  /* 链接列表 */
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.4vw; /* 设置每个 li 元素之间的间距 */
+  }
+  
+  .footer-link {
+    font-family: "poppins", sans-serif;
+    letter-spacing: 0.04vw;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.8vw;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+  
+  .footer-link:hover {
+    color: #888;
+  }
+  
+  /* 底部信息 */
+  .footer-bottom {
+    margin-top: 2vw;
+    margin-bottom: 0.6vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2vw;
+  }
+  
+  .footer-copyright {
+    font-family: "poppins", sans-serif;
+    color: #000;
+    font-weight: 200;
+    font-size: 0.7vw;
+  }
+  .footer-Medialink {
+    display: flex;
+    font-family: "poppins", sans-serif;
+    letter-spacing: 0.04vw;
+    color: #000;
+    font-size: 0.7vw;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
