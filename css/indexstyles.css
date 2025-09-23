@@ -379,9 +379,9 @@
     top: 82%;           /* 垂直定位起点 */
   }
   .baliantu-text2 {
-    font-family: "Afacad Flux", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.06vw;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.02vw;
     font-size: 0.8vw;
     color: #000;
     text-decoration: underline;
@@ -492,3 +492,4 @@
     transition: color 0.2s;
 
   }
+
