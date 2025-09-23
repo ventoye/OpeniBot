@@ -64,7 +64,7 @@
       transition-timing-function: ease-out; /* 悬停时的缓动效果 */
   }
   .nav-logo {
-    padding: 0.15vw 0 0 6vw;
+    padding: 0.16vw 0 0 6vw;
   }
   .navbar-right {
     display: flex;
@@ -490,4 +490,5 @@
     font-size: 0.7vw;
     font-weight: 400;
     transition: color 0.2s;
+
   }
