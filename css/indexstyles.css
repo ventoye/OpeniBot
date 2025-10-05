@@ -590,7 +590,7 @@
 .main-heading {
     font-family: "poppins", sans-serif;
     font-size: 2vw;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
     margin: 0;
     letter-spacing: 0.02vw;
@@ -605,4 +605,5 @@
     color: #2b2b2b;
     margin: 1vw auto 0;
     letter-spacing: 0.02vw;
+
 }
